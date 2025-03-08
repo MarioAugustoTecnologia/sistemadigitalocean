@@ -1,0 +1,55 @@
+{
+  "usuarios": [
+    {
+      "id": "User",
+      "cod": "1",
+      "email": "user@email.com",
+      "hashedPassword": "$2a$10$fNUKpSPps.c1DNCzrFjQCueVHKSO3ywBFcEewADmAEItxAIcxA/a2",
+      "fone": "15 33662014",
+      "datanascimento": "20/01/1991",
+      "categoria": "Administrador"
+    }
+  ],
+  "vendas": [],
+  "atual": [
+    {
+      "numero": "17",
+      "id": 18
+    }
+  ],
+  "catproduto": [],
+  "produtos": [],
+  "despesas": [],
+  "compras": [],
+  "compraatual": [
+    {
+      "numero": "9",
+      "id": 1
+    }
+  ],
+  "resultados": [],
+  "clientes": [
+    {
+      "nome": "Joel",
+      "email": "joellima@email.com",
+      "fone": "14 996663325",
+      "data_cad": "24/02/2025",
+      "bairro": "Vila Paulista",
+      "endereco": "Avenida Dante Delmanto - 500",
+      "cpf": "33555853897",
+      "id": 1
+    },
+    {
+      "nome": "Fernando",
+      "email": "fernando@email.com",
+      "fone": "14 333333",
+      "data_cad": "24/02/2025",
+      "bairro": "Vila Paulista",
+      "endereco": "Rua Jose Thiago",
+      "cpf": "335556214589",
+      "id": 2
+    }
+  ],
+  "fornecedor": [],
+  "catfornecedor": []
+}

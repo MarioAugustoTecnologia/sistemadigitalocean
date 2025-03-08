@@ -82,7 +82,6 @@ function App() {
     <Route path='/produto/cadcat' element={<PrivateRoutes><CadCatProd /></PrivateRoutes>}></Route>
     <Route path='/produtos/categoria/lista' element={<PrivateRoutes><CatProdutos/></PrivateRoutes>}></Route>
     <Route path='/produto/categoria/editar/:catcod' element={<PrivateRoutes><ProdutoCatEditar/></PrivateRoutes>}></Route>
-    <Route path='/vendas' element={<PrivateRoutes><Vendas /></PrivateRoutes>}></Route>  
     <Route path='/venda/troco' element={<PrivateRoutes><VendaTroco /></PrivateRoutes>}></Route> 
     <Route path='/venda/desconto' element={<PrivateRoutes><VendaDesconto /></PrivateRoutes>}></Route>     
     <Route path='/entradas' element={<PrivateRoutes><Entradas /></PrivateRoutes>}></Route>

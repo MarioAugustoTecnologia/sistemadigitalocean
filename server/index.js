@@ -8,8 +8,8 @@ const cors = require('cors');
 server.use(middlewares);
 server.use(router);
 
-server.use(cors({origin: ["https://sistemacomercial-app-xflcf.ondigitalocean.app"], 
-    methods: ["GET","POST", "PUT", "DELETE"],
+server.use(cors({origin: ["http://localhost:5173"], 
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true 
     }));
 

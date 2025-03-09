@@ -271,9 +271,7 @@ const logout = () => {
                      Resultado:
                   </span>
                 </Link>
-              </li>     
-           
-                
+               </li>                          
                 <li className="w-100" onClick={logout}>
                   <Link to="/login"
                     className="nav-link px-0 align-middle text-white"

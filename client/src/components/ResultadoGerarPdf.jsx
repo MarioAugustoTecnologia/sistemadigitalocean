@@ -11,7 +11,7 @@ const ResultadoGerarPdf = () => {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/resultados", {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/resultados", {
 
       method: "GET",
       headers: {'content-type':'application/json'} }
@@ -154,9 +154,9 @@ const ResultadoGerarPdf = () => {
                   </span>
                 </Link>
               </li>        
-                            <li className="w-100" onClick={logout}>
+              <li className="w-100" onClick={logout}>
                 <Link
-                  to="/"
+                  to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

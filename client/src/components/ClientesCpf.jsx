@@ -17,7 +17,7 @@ const ClientesCpf = () => {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/clientes").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/clientes").then((res) => {
 
       return res.json()
 
@@ -49,7 +49,7 @@ const ClientesCpf = () => {
 
       if (result.isConfirmed) {
 
-        fetch("http://localhost:3000/clientes/" + id, {
+        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/clientes/" + id, {
 
           method: "DELETE"
 

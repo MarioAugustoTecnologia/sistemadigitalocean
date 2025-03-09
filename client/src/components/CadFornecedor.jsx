@@ -21,7 +21,7 @@ const CadFornecedor = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/catfornecedor").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catfornecedor").then((res) => {
 
       return res.json()
 
@@ -268,7 +268,7 @@ function mudacorCat(){
                   const datacad = data.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
                   const cadobj = { nome, endereco, comp, cep, cidade, email, fone, datacad, catforn }          
                   
-                  fetch("http://localhost:3000/fornecedor", {
+                  fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor", {
                     method: "POST",
                     headers: { 'content-type': 'application/json' },
                     body: JSON.stringify(cadobj)
@@ -317,7 +317,7 @@ function mudacorCat(){
            const datacad = data.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
            const cadobj = { nome, endereco, numero, cep, cidade, email, fone, datacad, catforn }
 
-           fetch("http://localhost:3000/fornecedor", {
+           fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor", {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(cadobj)
@@ -464,7 +464,7 @@ function mudacorCat(){
                 </Link>
               </li>             
               <li className="w-100" onClick={logout}>
-                <Link to="/"
+                <Link to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

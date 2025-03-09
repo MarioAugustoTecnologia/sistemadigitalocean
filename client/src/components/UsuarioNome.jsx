@@ -21,7 +21,7 @@ const UsuarioNome = () => {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/usuarios").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/usuarios").then((res) => {
 
     return res.json()
 
@@ -42,7 +42,7 @@ const UsuarioNome = () => {
   
   const handleDelete = (id) => {   
 
-        fetch("http://localhost:3000/usuarios/" + id, {
+        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/usuarios/" + id, {
 
             method: "DELETE"    
 
@@ -182,6 +182,7 @@ const UsuarioNome = () => {
               
              <li className="w-100" onClick={logout}>
                <Link
+                 to="login"
                  className="nav-link px-0 align-middle text-white"
                >
                  <i className="fs-4 bi-power ms-2"></i>

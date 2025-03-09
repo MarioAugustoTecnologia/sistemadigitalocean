@@ -13,7 +13,7 @@ const CatFornecedores = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/catfornecedor").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catfornecedor").then((res) => {
 
     return res.json()
 
@@ -39,7 +39,7 @@ const CatFornecedores = () => {
                               
                       if (result.isConfirmed) {
 
-                        fetch("http://localhost:3000/catfornecedor/" + id, {
+                        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catfornecedor/" + id, {
 
                           method: "DELETE"    
               
@@ -181,7 +181,7 @@ const handleEdit = (id) => {
               
               <li className="w-100" onClick={logout}>
                 <Link
-                  to="/"
+                  to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

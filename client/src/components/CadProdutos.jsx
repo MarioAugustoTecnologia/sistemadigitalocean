@@ -11,7 +11,7 @@ const CadProdutos = () => {
   const {compracod} = useParams()
 
   useEffect(() => {
-    fetch("http://localhost:3000/compras/" + compracod).then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + compracod).then((res) => {
         return res.json();
     }).then((resp) => {
       idchange(resp.id);
@@ -35,7 +35,7 @@ const CadProdutos = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/catproduto").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catproduto").then((res) => {
 
       return res.json()
   
@@ -140,7 +140,7 @@ function MudaCorNome(){
                                 
                         if (result.isConfirmed) {
 
-                            fetch("http://localhost:3000/produtos", {
+                            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos", {
                               method: "POST",
                               headers: {'content-type':'application/json'},
                               body: JSON.stringify(cadobj)
@@ -288,7 +288,7 @@ const logout = () => {
               </li>        
                                   
                  <li className="w-100" onClick={logout}>
-                  <Link to="/"
+                  <Link to="/login"
                     className="nav-link px-0 align-middle text-white"
                   >
                     <i className="fs-4 bi-power ms-2"></i>

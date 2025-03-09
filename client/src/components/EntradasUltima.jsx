@@ -11,7 +11,7 @@ const EntradasUltima = () => {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/atual").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/atual").then((res) => {
 
         return res.json()
 
@@ -27,7 +27,7 @@ const EntradasUltima = () => {
 
 const handleDelete = (id) => {    
 
-  fetch("http://localhost:3000/atual/" + id , {
+  fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/atual/" + id , {
 
       method: "DELETE"    
 
@@ -154,7 +154,7 @@ return (
               
               <li className="w-100" onClick={logout}>
                 <Link
-                  to="/"
+                  to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

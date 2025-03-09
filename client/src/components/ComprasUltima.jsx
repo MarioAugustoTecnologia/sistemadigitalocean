@@ -11,7 +11,7 @@ const ComprasUltima = () => {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/compraatual").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compraatual").then((res) => {
 
         return res.json()
 
@@ -27,7 +27,7 @@ const ComprasUltima = () => {
 
 const handleDelete = (id) => {    
 
-  fetch("http://localhost:3000/compraatual/" + id , {
+  fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compraatual/" + id , {
 
       method: "DELETE"    
 
@@ -154,7 +154,7 @@ return (
               
               <li className="w-100" onClick={logout}>
                 <Link
-                  to="/"
+                  to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

@@ -10,7 +10,7 @@ const EditarCliente = () => {
   const { clientecod } = useParams();
 
   useEffect(() => {
-    fetch("http://localhost:3000/clientes/" + clientecod).then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/clientes/" + clientecod).then((res) => {
       return res.json();
     }).then((resp) => {
       idchange(resp.id);
@@ -130,7 +130,7 @@ const EditarCliente = () => {
 
         if (result.isConfirmed) {
 
-          fetch("http://localhost:3000/clientes/" + clientecod, {
+          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/clientes/" + clientecod, {
             method: "PUT",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(edtobj)
@@ -280,7 +280,7 @@ const EditarCliente = () => {
               </li>
 
               <li className="w-100" onClick={logout}>
-                <Link to='/'
+                <Link to='/login'
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

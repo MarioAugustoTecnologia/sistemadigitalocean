@@ -12,7 +12,7 @@ const Fornecedores = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("http://localhost:3000/fornecedor").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor").then((res) => {
 
     return res.json()
 
@@ -41,7 +41,7 @@ const Fornecedores = () => {
                                  
                          if (result.isConfirmed) {
        
-                           fetch("http://localhost:3000/fornecedor/" + id, {
+                           fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor/" + id, {
        
                                    method: "DELETE"    
        
@@ -75,7 +75,7 @@ const deleteall = (id) => {
       
       for (let id = 0; id <= fornecedores.length; id++) {
     
-     fetch("http://localhost:3000/fornecedor/" + id, {
+     fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor/" + id, {
 
       method: "DELETE"    
 
@@ -211,7 +211,7 @@ const deleteall = (id) => {
               
               <li className="w-100" onClick={logout}>
                 <Link
-                  to="/"
+                  to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

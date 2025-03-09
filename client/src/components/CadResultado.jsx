@@ -76,7 +76,7 @@ const CadResultado = () => {
 
         if (result.isConfirmed) {
 
-          fetch("http://localhost:3000/resultados", {
+          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/resultados", {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(cadobj)
@@ -231,7 +231,7 @@ const CadResultado = () => {
               </li>
 
               <li className="w-100" onClick={logout}>
-                <Link to="/"
+                <Link to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

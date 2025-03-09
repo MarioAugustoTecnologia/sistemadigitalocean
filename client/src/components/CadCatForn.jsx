@@ -55,7 +55,7 @@ const CadCatForn = () => {
                       
               if (result.isConfirmed) {
 
-                fetch("http://localhost:3000/catfornecedor", {
+                fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catfornecedor", {
                   method: "POST",
                   headers: {'content-type':'application/json'},
                   body: JSON.stringify(cadobj)
@@ -197,17 +197,15 @@ const logout = () => {
                      Resultado:
                   </span>
                 </Link>
-              </li>          
-           
-                
-                 <li className="w-100" onClick={logout}>
-                  <Link to="/"
+              </li>      
+                           
+                  <li className="w-100" onClick={logout}>
+                   <Link to="/login"
                     className="nav-link px-0 align-middle text-white"
-                  >
-                    <i className="fs-4 bi-power ms-2"></i>
+                    ><i className="fs-4 bi-power ms-2"></i>
                     <span className="ms-2 d-none d-sm-inline">Logout</span>
-                  </Link>
-                 </li>
+                    </Link>
+                   </li>
               </ul>
             </div>
           </div>

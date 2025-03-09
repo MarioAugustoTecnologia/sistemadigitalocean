@@ -11,7 +11,7 @@ const EntradasNumeroEditar = () => {
   const { entradacod } = useParams()
 
   useEffect(() => {
-    fetch("http://localhost:3000/vendas/" + entradacod).then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas/" + entradacod).then((res) => {
       return res.json();
     }).then((resp) => {
       vendanchange(resp.vendan);
@@ -108,9 +108,7 @@ const EntradasNumeroEditar = () => {
       ano = data.getFullYear();
     return `${dia}/${mes}/${ano}`;
   }
-
-
-
+   
   const atualizar = (e) => {
 
     e.preventDefault();
@@ -140,7 +138,7 @@ const EntradasNumeroEditar = () => {
             if (result.isConfirmed) {
 
 
-              fetch("http://localhost:3000/vendas/" + entradacod, {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas/" + entradacod, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(edtobj)
@@ -180,7 +178,7 @@ const EntradasNumeroEditar = () => {
 
             if (result.isConfirmed) {
 
-              fetch("http://localhost:3000/vendas/" + entradacod, {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas/" + entradacod, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(edtobj)
@@ -228,7 +226,7 @@ const EntradasNumeroEditar = () => {
 
           if (result.isConfirmed) {
 
-            fetch("http://localhost:3000/vendas/" + entradacod, {
+            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas/" + entradacod, {
               method: "PUT",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(edtobj)
@@ -268,7 +266,7 @@ const EntradasNumeroEditar = () => {
           if (result.isConfirmed) {
 
 
-            fetch("http://localhost:3000/vendas/" + entradacod, {
+            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas/" + entradacod, {
               method: "PUT",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(edtobj)
@@ -307,7 +305,7 @@ const EntradasNumeroEditar = () => {
 
           if (result.isConfirmed) {
 
-            fetch("http://localhost:3000/vendas/" + entradacod, {
+            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas/" + entradacod, {
               method: "PUT",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(edtobj)
@@ -348,7 +346,7 @@ const EntradasNumeroEditar = () => {
           if (result.isConfirmed) {
 
 
-            fetch("http://localhost:3000/vendas", {
+            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas", {
               method: "POST",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(cadobj)
@@ -512,7 +510,7 @@ const EntradasNumeroEditar = () => {
                 </Link>
               </li>
               <li className="w-100" onClick={logout}>
-                <Link to="/"
+                <Link to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

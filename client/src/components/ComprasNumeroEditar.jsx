@@ -11,7 +11,7 @@ const ComprasNumeroEditar = () => {
   const { compracod } = useParams()
 
   useEffect(() => {
-    fetch("http://localhost:3000/compras/" + compracod).then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + compracod).then((res) => {
       return res.json();
     }).then((resp) => {
       compranchange(resp.compran);
@@ -49,7 +49,7 @@ const ComprasNumeroEditar = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/fornecedor").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor").then((res) => {
 
       return res.json()
 
@@ -187,7 +187,7 @@ const ComprasNumeroEditar = () => {
 
             if (isValidate()) {
 
-              fetch("http://localhost:3000/compras/" + compracod, {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + compracod, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(edtobj)
@@ -214,7 +214,7 @@ const ComprasNumeroEditar = () => {
 
             if (isValidate()) {
 
-              fetch("http://localhost:3000/compras/" + compracod, {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + compracod, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(edtobj)
@@ -250,7 +250,7 @@ const ComprasNumeroEditar = () => {
           if (isValidate()) {
 
             {
-              fetch("http://localhost:3000/compras/" + compracod, {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + compracod, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(edtobj)
@@ -276,7 +276,7 @@ const ComprasNumeroEditar = () => {
           if (isValidate()) {
 
             {
-              fetch("http://localhost:3000/compras/" + compracod, {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + compracod, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(edtobj)
@@ -302,7 +302,7 @@ const ComprasNumeroEditar = () => {
           if (isValidate()) {
 
             {
-              fetch("http://localhost:3000/compras/" + compracod, {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + compracod, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(edtobj)
@@ -329,7 +329,7 @@ const ComprasNumeroEditar = () => {
           if (isValidate()) {
 
             {
-              fetch("http://localhost:3000/compras", {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras", {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(cadobj)
@@ -498,7 +498,7 @@ const ComprasNumeroEditar = () => {
                 </Link>
               </li>
               <li className="w-100" onClick={logout}>
-                <Link to="/"
+                <Link to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

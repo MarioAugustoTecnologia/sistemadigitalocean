@@ -13,7 +13,7 @@ const CatProdutos = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("http://localhost:3000/catproduto").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catproduto").then((res) => {
 
     return res.json()
 
@@ -38,7 +38,7 @@ const CatProdutos = () => {
                                      
                              if (result.isConfirmed) {
        
-                               fetch("http://localhost:3000/catproduto/" + id, {
+                               fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catproduto/" + id, {
        
                                  method: "DELETE"    
                      
@@ -187,10 +187,10 @@ const handleEdit = (id) => {
        
               
               <li className="w-100" onClick={logout}>
-                <Link
-                  to="/"
+                 <Link
+                  to="/login"
                   className="nav-link px-0 align-middle text-white"
-                >
+                  >
                   <i className="fs-4 bi-power ms-2"></i>
                   <span className="ms-2 d-none d-sm-inline">Logout</span>
                 </Link>

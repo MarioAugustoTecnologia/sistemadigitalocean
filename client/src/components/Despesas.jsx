@@ -13,7 +13,7 @@ const Despesas = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("http://localhost:3000/despesas").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas").then((res) => {
 
       return res.json()
 
@@ -42,7 +42,7 @@ const Despesas = () => {
 
       if (result.isConfirmed) {
 
-        fetch("http://localhost:3000/despesas/" + id, {
+        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas/" + id, {
 
           method: "DELETE"
 
@@ -74,7 +74,7 @@ const Despesas = () => {
       if (result.isConfirmed) {
         for (let id = 0; id <= despesas.length; id++) {
 
-          fetch("http://localhost:3000/despesas/" + id, {
+          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas/" + id, {
 
             method: "DELETE"
 
@@ -122,7 +122,7 @@ const Despesas = () => {
 
     const cadobj = { nome, total, custo, data_cad }
 
-    fetch("http://localhost:3000/despesas", {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas", {
       method: "POST",
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(cadobj)
@@ -245,11 +245,9 @@ const Despesas = () => {
                   </span>
                 </Link>
               </li>
-
-
               <li className="w-100" onClick={logout}>
                 <Link
-                  to="/"
+                  to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

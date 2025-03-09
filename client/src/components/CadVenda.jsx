@@ -14,7 +14,7 @@ const CadVenda = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/produtos/" + pcod).then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + pcod).then((res) => {
       return res.json();
     }).then((resp) => {
       Idchange(resp.id);
@@ -150,7 +150,7 @@ const CadVenda = () => {
 
             if (result.isConfirmed) {
 
-              fetch("http://localhost:3000/vendas", {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas", {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(cadobj)
@@ -177,7 +177,7 @@ const CadVenda = () => {
 
               const edtobj = { id, nome, preco, qtd, categoria, data_cadastro, codigo }
 
-              fetch("http://localhost:3000/produtos/" + pcod, {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + pcod, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(edtobj)
@@ -210,7 +210,7 @@ const CadVenda = () => {
 
             if (result.isConfirmed) {
 
-              fetch("http://localhost:3000/vendas", {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas", {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(cadobj)
@@ -238,7 +238,7 @@ const CadVenda = () => {
 
               const edtobj = { id, nome, preco, qtd, categoria, data_cadastro, codigo }
 
-              fetch("http://localhost:3000/produtos/" + pcod, {
+              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + pcod, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(edtobj)
@@ -280,7 +280,7 @@ const CadVenda = () => {
 
             const cadobj = { vendan, nome, quant, preco, total, data, valorpag, formapag, parcelamento, parcelan, mes }
 
-            fetch("http://localhost:3000/vendas", {
+            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas", {
               method: "POST",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(cadobj)
@@ -300,7 +300,7 @@ const CadVenda = () => {
 
             const edtobj = { id, nome, preco, qtd, categoria, data_cadastro, codigo }
 
-            fetch("http://localhost:3000/produtos/" + pcod, {
+            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + pcod, {
               method: "PUT",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(edtobj)
@@ -458,7 +458,7 @@ const CadVenda = () => {
 
 
               <li className="w-100" onClick={logout}>
-                <Link to="/"
+                <Link to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

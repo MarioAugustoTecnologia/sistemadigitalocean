@@ -18,7 +18,7 @@ const EntradasNome = () => {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/vendas").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas").then((res) => {
 
       return res.json()
 
@@ -46,7 +46,7 @@ const EntradasNome = () => {
       if (result.isConfirmed) {
 
 
-        fetch("http://localhost:3000/vendas/" + id, {
+        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas/" + id, {
 
           method: "DELETE"
 
@@ -214,7 +214,7 @@ const EntradasNome = () => {
               </li>
 
               <li className="w-100" onClick={logout}>
-                <Link
+                <Link to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

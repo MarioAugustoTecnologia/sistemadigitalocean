@@ -5,7 +5,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Swal from 'sweetalert2';
 
 
-
 const Produtos = () => {
 
   const [produtodata, setProdutodata] = useState([])
@@ -14,7 +13,7 @@ const Produtos = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("http://localhost:3000/produtos").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos").then((res) => {
 
       return res.json()
 
@@ -45,7 +44,7 @@ const Produtos = () => {
 
       if (result.isConfirmed) {
 
-        fetch("http://localhost:3000/produtos/" + id, {
+        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + id, {
 
           method: "DELETE"
 
@@ -78,7 +77,7 @@ const Produtos = () => {
 
         for (let id = 0; id <= produtodata.length; id++) {
 
-          fetch("http://localhost:3000/produtos/" + id, {
+          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + id, {
 
             method: "DELETE"
 

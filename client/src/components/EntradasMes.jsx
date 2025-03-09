@@ -18,7 +18,7 @@ const EntradasMes = () => {
   
   useEffect(() => {
 
-    fetch("http://localhost:3000/vendas").then((res) => {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas").then((res) => {
 
     return res.json()
 
@@ -46,7 +46,7 @@ const EntradasMes = () => {
          if (result.isConfirmed) {
    
    
-           fetch("http://localhost:3000/vendas/" + id, {
+           fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas/" + id, {
    
              method: "DELETE"
    
@@ -103,7 +103,7 @@ function formataData(){
   
   const cadobj = {nome, total, data, preco, mes, vendan, troco, valorpag}  
   
-   fetch("http://localhost:3000/vendas", {
+   fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas", {
      method: "POST",
      headers: {'content-type':'application/json'},
      body: JSON.stringify(cadobj)
@@ -241,7 +241,7 @@ function formataData(){
               </li>      
              
              <li className="w-100" onClick={logout}>
-               <Link
+               <Link to="/login"
                  className="nav-link px-0 align-middle text-white"
                >
                  <i className="fs-4 bi-power ms-2"></i>

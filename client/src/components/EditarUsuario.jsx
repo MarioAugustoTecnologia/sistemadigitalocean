@@ -14,7 +14,7 @@ const EditarUsuario = () => {
     //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
-        fetch("http://localhost:3000/usuarios/" + usuariocod).then((res) => {
+        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/usuarios/" + usuariocod).then((res) => {
             return res.json();
         }).then((resp) => {
             idchange(resp.id);
@@ -127,7 +127,7 @@ const EditarUsuario = () => {
                 }).then((result) => {
                  
                   if (result.isConfirmed) {
-                    fetch("http://localhost:3000/usuarios/" + usuariocod, {
+                    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/usuarios/" + usuariocod, {
                       method: "PUT",
                       headers: {'content-type':'application/json'},
                       body: JSON.stringify(edtobj)
@@ -172,7 +172,7 @@ const EditarUsuario = () => {
                   /* Read more about isConfirmed, isDenied below */
                   if (result.isConfirmed) {
 
-                    fetch("http://localhost:3000/usuarios/" + usuariocod, {
+                    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/usuarios/" + usuariocod, {
                       method: "PUT",
                       headers: {'content-type':'application/json'},
                       body: JSON.stringify(edtobj)
@@ -345,7 +345,7 @@ const EditarUsuario = () => {
               </li>            
               
                  <li className="w-100" onClick={logout}>
-                  <Link to='/'
+                  <Link to='/login'
                     className="nav-link px-0 align-middle text-white"
                   >
                     <i className="fs-4 bi-power ms-2"></i>

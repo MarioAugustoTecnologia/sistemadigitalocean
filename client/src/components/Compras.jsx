@@ -13,7 +13,7 @@ const Compras = () => {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/compras", {
+    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras", {
 
       method: "GET",
       headers: { 'content-type': 'application/json' }
@@ -45,7 +45,7 @@ const Compras = () => {
 
       if (result.isConfirmed) {
 
-        fetch("http://localhost:3000/compras/" + id, {
+        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + id, {
 
           method: "DELETE"
 
@@ -79,7 +79,7 @@ const Compras = () => {
 
         for (let id = 0; id <= compras.length; id++) {
 
-          fetch("http://localhost:3000/compras/" + id, {
+          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + id, {
 
             method: "DELETE"
 
@@ -220,7 +220,7 @@ const Compras = () => {
 
               <li className="w-100" onClick={logout}>
                 <Link
-                  to="/"
+                  to="/login"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-power ms-2"></i>

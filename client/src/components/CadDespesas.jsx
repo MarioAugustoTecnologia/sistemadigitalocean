@@ -68,7 +68,7 @@ const CadDespesas = () => {
 
           if (result.isConfirmed) {
 
-            fetch("http://localhost:3000/despesas", {
+            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas", {
               method: "POST",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(cadobj)
@@ -108,7 +108,7 @@ const CadDespesas = () => {
 
           if (result.isConfirmed) {
 
-            fetch("http://localhost:3000/despesas", {
+            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas", {
               method: "POST",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(cadobj)

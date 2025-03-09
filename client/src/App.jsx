@@ -10,7 +10,6 @@ import UsuarioCategoria from './components/UsuarioCategoria';
 import Produtos from './components/Produtos';
 import CadProdutos from './components/CadProdutos';
 import ProdutosNome from './components/ProdutosNome';
-import Vendas from './components/Vendas';
 import EditarProduto from './components/EditarProduto';
 import Entradas from './components/Entradas';
 import Home from './components/Home';

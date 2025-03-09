@@ -12,7 +12,7 @@ const Resultado = () => {
 
   useEffect(() => {
 
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/resultados", {
+    fetch("http://localhost:3000/resultados", {
 
       method: "GET",
       headers: { 'content-type': 'application/json' }
@@ -44,7 +44,7 @@ const Resultado = () => {
 
       if (result.isConfirmed) {
 
-        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/resultados/" + id, {
+        fetch("http://localhost:3000/resultados/" + id, {
 
           method: "DELETE"
 
@@ -78,7 +78,7 @@ const Resultado = () => {
 
         for (let id = 0; id <= result.length; id++) {
 
-          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/resultados/" + id, {
+          fetch("http://localhost:3000/resultados/" + id, {
     
             method: "DELETE"
     

@@ -21,7 +21,7 @@ const CadFornecedor = () => {
 
 
   useEffect(() => {
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catfornecedor").then((res) => {
+    fetch("http://localhost:3000/catfornecedor").then((res) => {
 
       return res.json()
 
@@ -268,7 +268,7 @@ function mudacorCat(){
                   const datacad = data.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
                   const cadobj = { nome, endereco, comp, cep, cidade, email, fone, datacad, catforn }          
                   
-                  fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor", {
+                  fetch("http://localhost:3000/fornecedor", {
                     method: "POST",
                     headers: { 'content-type': 'application/json' },
                     body: JSON.stringify(cadobj)
@@ -317,7 +317,7 @@ function mudacorCat(){
            const datacad = data.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
            const cadobj = { nome, endereco, numero, cep, cidade, email, fone, datacad, catforn }
 
-           fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor", {
+           fetch("http://localhost:3000/fornecedor", {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(cadobj)

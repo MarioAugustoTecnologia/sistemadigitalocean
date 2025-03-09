@@ -12,7 +12,7 @@ const EditarFornecedor = () => {
     //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
-        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor/" + forcod).then((res) => {
+        fetch("http://localhost:3000/fornecedor/" + forcod).then((res) => {
             return res.json();
         }).then((resp) => {
             idchange(resp.id);

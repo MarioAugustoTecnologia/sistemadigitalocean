@@ -16,7 +16,7 @@ const EntradasNumero = () => {
 
     useEffect(() => {
 
-        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas").then((res) => {
+        fetch("http://localhost:3000/vendas").then((res) => {
 
             return res.json()
 
@@ -43,7 +43,7 @@ const EntradasNumero = () => {
 
             if (result.isConfirmed) {
 
-                fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas/" + id, {
+                fetch("http://localhost:3000/vendas/" + id, {
 
                     method: "DELETE"
 
@@ -109,7 +109,7 @@ const EntradasNumero = () => {
 
             const cadobj = { nome, total, data, preco, vendan, troco, valorpag }
 
-            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/vendas", {
+            fetch("http://localhost:3000/vendas", {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(cadobj)
@@ -138,7 +138,7 @@ const EntradasNumero = () => {
             const numero = buscanumero;
             const register = { numero }
 
-            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/atual", {
+            fetch("http://localhost:3000/atual", {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(register)

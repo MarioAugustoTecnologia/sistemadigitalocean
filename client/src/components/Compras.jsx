@@ -13,7 +13,7 @@ const Compras = () => {
 
   useEffect(() => {
 
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras", {
+    fetch("http://localhost:3000/compras", {
 
       method: "GET",
       headers: { 'content-type': 'application/json' }
@@ -45,7 +45,7 @@ const Compras = () => {
 
       if (result.isConfirmed) {
 
-        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + id, {
+        fetch("http://localhost:3000/compras/" + id, {
 
           method: "DELETE"
 
@@ -79,7 +79,7 @@ const Compras = () => {
 
         for (let id = 0; id <= compras.length; id++) {
 
-          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + id, {
+          fetch("http://localhost:3000/compras/" + id, {
 
             method: "DELETE"
 

@@ -11,7 +11,7 @@ const EditarProduto = () => {
   //const [empdata, empdatachange] = useState({});
 
   useEffect(() => {
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + produtocod).then((res) => {
+    fetch("http://localhost:3000/produtos/" + produtocod).then((res) => {
       return res.json();
     }).then((resp) => {
       idchange(resp.id);
@@ -38,7 +38,7 @@ const EditarProduto = () => {
   const [codigo, codchange] = useState("")
 
   useEffect(() => {
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catproduto").then((res) => {
+    fetch("http://localhost:3000/catproduto").then((res) => {
 
       return res.json()
 
@@ -141,7 +141,7 @@ const EditarProduto = () => {
 
           if (result.isConfirmed) {
 
-            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + produtocod, {
+            fetch("http://localhost:3000/produtos/" + produtocod, {
               method: "PUT",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(edtobj)
@@ -188,7 +188,7 @@ const EditarProduto = () => {
 
           if (result.isConfirmed) {
 
-            fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + produtocod, {
+            fetch("http://localhost:3000/produtos/" + produtocod, {
               method: "PUT",
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify(edtobj)

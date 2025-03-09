@@ -13,7 +13,7 @@ const CatProdutos = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catproduto").then((res) => {
+    fetch("http://localhost:3000/catproduto").then((res) => {
 
     return res.json()
 
@@ -38,7 +38,7 @@ const CatProdutos = () => {
                                      
                              if (result.isConfirmed) {
        
-                               fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catproduto/" + id, {
+                               fetch("http://localhost:3000/catproduto/" + id, {
        
                                  method: "DELETE"    
                      

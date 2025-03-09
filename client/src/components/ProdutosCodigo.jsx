@@ -19,7 +19,7 @@ const ProdutosCodigo = () => {
   
    useEffect(() => {
 
-     fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos").then((res) => {
+     fetch("http://localhost:3000/produtos").then((res) => {
 
       return res.json()
 
@@ -51,7 +51,7 @@ const ProdutosCodigo = () => {
    
          if (result.isConfirmed) {
    
-           fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + id, {
+           fetch("http://localhost:3000/produtos/" + id, {
 
              method: "DELETE"
 

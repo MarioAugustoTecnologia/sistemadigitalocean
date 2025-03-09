@@ -18,7 +18,7 @@ const ComprasMes = () => {
   
   useEffect(() => {
 
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras").then((res) => {
+    fetch("http://localhost:3000/compras").then((res) => {
 
     return res.json()
 
@@ -45,7 +45,7 @@ const ComprasMes = () => {
 
       if (result.isConfirmed) {
 
-        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + id, {
+        fetch("http://localhost:3000/compras/" + id, {
 
           method: "DELETE"
 
@@ -102,7 +102,7 @@ function formataData(){
   
   const cadobj = {nome, total, data_cad, preco, mes, compran, troco, valorpag}  
   
-   fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras", {
+   fetch("http://localhost:3000/compras", {
      method: "POST",
      headers: {'content-type':'application/json'},
      body: JSON.stringify(cadobj)

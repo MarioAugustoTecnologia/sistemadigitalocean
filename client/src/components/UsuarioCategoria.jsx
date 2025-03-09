@@ -21,7 +21,7 @@ const UsuarioCategoria = () => {
 
   useEffect(() => {
 
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/usuarios").then((res) => {
+    fetch("http://localhost:3000/usuarios").then((res) => {
 
     return res.json()
 
@@ -43,7 +43,7 @@ const UsuarioCategoria = () => {
   const handleDelete = (id) => {
   
 
-        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/usuarios/" + id, {
+        fetch("http://localhost:3000/usuarios/" + id, {
 
             method: "DELETE"    
 

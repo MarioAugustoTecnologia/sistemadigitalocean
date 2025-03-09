@@ -13,7 +13,7 @@ const Produtos = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos").then((res) => {
+    fetch("http://localhost:3000/produtos").then((res) => {
 
       return res.json()
 
@@ -44,7 +44,7 @@ const Produtos = () => {
 
       if (result.isConfirmed) {
 
-        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + id, {
+        fetch("http://localhost:3000/produtos/" + id, {
 
           method: "DELETE"
 
@@ -77,7 +77,7 @@ const Produtos = () => {
 
         for (let id = 0; id <= produtodata.length; id++) {
 
-          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/produtos/" + id, {
+          fetch("http://localhost:3000/produtos/" + id, {
 
             method: "DELETE"
 

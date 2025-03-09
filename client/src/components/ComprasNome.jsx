@@ -18,7 +18,7 @@ const ComprasNome = () => {
   
   useEffect(() => {
 
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras").then((res) => {
+    fetch("http://localhost:3000/compras").then((res) => {
 
     return res.json()
 
@@ -45,7 +45,7 @@ const ComprasNome = () => {
       
             if (result.isConfirmed) {
       
-              fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras/" + id, {
+              fetch("http://localhost:3000/compras/" + id, {
       
                 method: "DELETE"
       

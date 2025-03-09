@@ -13,7 +13,7 @@ const Despesas = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas").then((res) => {
+    fetch("http://localhost:3000/despesas").then((res) => {
 
       return res.json()
 
@@ -42,7 +42,7 @@ const Despesas = () => {
 
       if (result.isConfirmed) {
 
-        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas/" + id, {
+        fetch("http://localhost:3000/despesas/" + id, {
 
           method: "DELETE"
 
@@ -74,7 +74,7 @@ const Despesas = () => {
       if (result.isConfirmed) {
         for (let id = 0; id <= despesas.length; id++) {
 
-          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas/" + id, {
+          fetch("http://localhost:3000/despesas/" + id, {
 
             method: "DELETE"
 
@@ -122,7 +122,7 @@ const Despesas = () => {
 
     const cadobj = { nome, total, custo, data_cad }
 
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas", {
+    fetch("http://localhost:3000/despesas", {
       method: "POST",
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(cadobj)

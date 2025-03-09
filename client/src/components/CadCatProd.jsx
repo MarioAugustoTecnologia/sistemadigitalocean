@@ -58,7 +58,7 @@ const CadCatProd = () => {
                             
                     if (result.isConfirmed) {
       
-                      fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catproduto", {
+                      fetch("http://localhost:3000/catproduto", {
                         method: "POST",
                         headers: {'content-type':'application/json'},
                         body: JSON.stringify(cadobj)

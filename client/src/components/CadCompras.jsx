@@ -23,7 +23,7 @@ const CadCompras = () => {
  
 
   useEffect(() => {
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/fornecedor").then((res) => {
+    fetch("http://localhost:3000/fornecedor").then((res) => {
 
     return res.json()
 
@@ -181,7 +181,7 @@ function mudacorMes(){
                          
                  if (result.isConfirmed) {
 
-                  fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras", {
+                  fetch("http://localhost:3000/compras", {
                     method: "POST",
                     headers: {'content-type':'application/json'},
                     body: JSON.stringify(cadobj)
@@ -225,7 +225,7 @@ function mudacorMes(){
                           
                   if (result.isConfirmed) {
 
-                    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras", {
+                    fetch("http://localhost:3000/compras", {
                       method: "POST",
                       headers: {'content-type':'application/json'},
                       body: JSON.stringify(cadobj)
@@ -285,7 +285,7 @@ function mudacorMes(){
                         
                 if (result.isConfirmed) {
 
-                       fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compras", {
+                       fetch("http://localhost:3000/compras", {
                        method: "POST",
                        headers: {'content-type':'application/json'},
                        body: JSON.stringify(cadobj)

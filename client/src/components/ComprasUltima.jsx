@@ -11,7 +11,7 @@ const ComprasUltima = () => {
 
   useEffect(() => {
 
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compraatual").then((res) => {
+    fetch("http://localhost:3000/compraatual").then((res) => {
 
         return res.json()
 
@@ -27,7 +27,7 @@ const ComprasUltima = () => {
 
 const handleDelete = (id) => {    
 
-  fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/compraatual/" + id , {
+  fetch("http://localhost:3000/compraatual/" + id , {
 
       method: "DELETE"    
 

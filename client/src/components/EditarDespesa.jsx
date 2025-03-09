@@ -10,7 +10,7 @@ const EditarDespesa = () => {
   const { despesacod } = useParams()
 
   useEffect(() => {
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas/" + despesacod).then((res) => {
+    fetch("http://localhost:3000/despesas/" + despesacod).then((res) => {
       return res.json();
     }).then((resp) => {
       idchange(resp.id);
@@ -91,7 +91,7 @@ const EditarDespesa = () => {
 
         if (result.isConfirmed) {
 
-          fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/despesas/" + despesacod, {
+          fetch("http://localhost:3000/despesas/" + despesacod, {
             method: "PUT",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(edtobj)

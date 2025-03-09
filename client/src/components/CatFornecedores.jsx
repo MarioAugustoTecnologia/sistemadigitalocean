@@ -13,7 +13,7 @@ const CatFornecedores = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catfornecedor").then((res) => {
+    fetch("http://localhost:3000/catfornecedor").then((res) => {
 
     return res.json()
 
@@ -39,7 +39,7 @@ const CatFornecedores = () => {
                               
                       if (result.isConfirmed) {
 
-                        fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/catfornecedor/" + id, {
+                        fetch("http://localhost:3000/catfornecedor/" + id, {
 
                           method: "DELETE"    
               

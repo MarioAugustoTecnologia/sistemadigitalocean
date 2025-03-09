@@ -11,7 +11,7 @@ const ResultadoGerarPdf = () => {
 
   useEffect(() => {
 
-    fetch("https://sisemacomercial-app-dt9bi.ondigitalocean.app/resultados", {
+    fetch("http://localhost:3000/resultados", {
 
       method: "GET",
       headers: {'content-type':'application/json'} }

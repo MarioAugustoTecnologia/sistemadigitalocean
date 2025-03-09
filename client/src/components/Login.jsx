@@ -20,7 +20,7 @@ const Login = () => {
     if(validate()){ 
 
       //console.log('proceed')
-      fetch('http://localhost:3000/usuarios/' + usuario).then((res) => {
+      fetch('https://sisemacomercial-app-dt9bi.ondigitalocean.app/usuarios/' + usuario).then((res) => {
         
         return res.json()
   

@@ -65,7 +65,7 @@ function App() {
     <ToastContainer theme='colored'></ToastContainer>
     <BrowserRouter>
     <Routes>   
-    <Route path='/' element={<Login />}></Route>
+    <Route path='/ini' element={<Login />}></Route>
     <Route path='/home' element={<PrivateRoutes><Home /></PrivateRoutes>}></Route>
     <Route path='/cadusuarios' element={<PrivateRoutes><CadUsuarios /></PrivateRoutes>}></Route>
     <Route path='/usuarios' element={<PrivateRoutes><Usuarios /></PrivateRoutes>}></Route>
